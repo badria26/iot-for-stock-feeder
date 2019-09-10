@@ -6,15 +6,15 @@
 #include<TwitterApi.h>
 
 
-char ssid[] = "mkpmei2019";  //SSID
-char password[] = "izininet123"; //Password
+char ssid[] = "your ssid"  //SSID
+char password[] = "your password"; //Password
 
 unsigned long myChannelField = 848037; // Channel ID
 const int ChannelField = 1; // Which To Field Write
 const char * myWriteAPIKey = "E9CQ5GPZF8DA54HQ"; // Write API Key
 WiFiClient client;
 
-#define TELEGRAM_BOT_TOKEN "853214905:AAF4hfc1qSpHXEKTwz7jBqIxo8u4CBS5lCw"
+#define TELEGRAM_BOT_TOKEN "853214905:AAF4hfc1qSpHXEKTwz7jBqIxo8u4CBS5lCw" //initialize tele bot for message from
 WiFiClientSecure clientTele, clientTwit;
 
 UniversalTelegramBot bot(TELEGRAM_BOT_TOKEN, clientTele);
@@ -32,13 +32,13 @@ const int buzzer = 4;
 #define IN2  26
 #define IN3  25
 #define IN4  33
-//variabel for jarak
+//variabel for distance
 long duration;
 int distance;
 //variabel for motor stepper
 int Steps = 0;
 int k=0;
-boolean Direction = true;// gre
+boolean Direction = true;
 unsigned long last_time;
 unsigned long currentMillis ;
 int steps_left=4095;
@@ -216,8 +216,6 @@ void loop() {
   }
 
 
-//  Serial.print("k= ");
-//  Serial.println(k);
   Serial.print("Jarak saat ini (cm) : ");
   Serial.println(distance);
   Serial.println("Send data to Thingspeak ....");
@@ -245,22 +243,6 @@ void loop() {
     }
   }
 
-  //code stepper
-  /*while(steps_left>0){
-  currentMillis = micros();
-  if(currentMillis-last_time>=1000){
-  stepper(1); 
-  times=times+micros()-last_time;
-  last_time=micros();
-  steps_left--;
-  }
-  }
-  //Serial.println(times);
-  Serial.println("Katup Terbuka!");
-  delay(5000);
-  Direction=!Direction;
-  steps_left=4095;
-  */
   delay(1000);
 }
 
