@@ -11,10 +11,10 @@ char password[] = "your password"; //Password
 
 unsigned long myChannelField = 848037; // Channel ID
 const int ChannelField = 1; // Which To Field Write
-const char * myWriteAPIKey = "E9CQ5GPZF8DA54HQ"; // Write API Key
+const char * myWriteAPIKey = "your Thinngspeak API key"; // Write API Key
 WiFiClient client;
 
-#define TELEGRAM_BOT_TOKEN "853214905:AAF4hfc1qSpHXEKTwz7jBqIxo8u4CBS5lCw" //initialize tele bot for message from
+#define TELEGRAM_BOT_TOKEN "Your boot tele account"; //initialize tele bot for message from
 WiFiClientSecure clientTele, clientTwit;
 
 UniversalTelegramBot bot(TELEGRAM_BOT_TOKEN, clientTele);
